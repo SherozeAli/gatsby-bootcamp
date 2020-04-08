@@ -1,17 +1,14 @@
 import React from "react"
-import Footer from '../components/footer'
-import Header from '../components/header'
+import Layout from '../components/layout'
 
 const ContactPage =()=>{
 
     return(
-        <div>
-<Header/>
-            <h1>
-            Contact Page
-            </h1>
-            <Footer/>
-        </div>
+    <Layout>
+        <h1>
+            CONTACT 
+        </h1>
+    </Layout>
     )
 }
 
