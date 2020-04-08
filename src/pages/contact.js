@@ -1,15 +1,15 @@
 import React from "react"
 
-const IndexPage =()=>{
+const ContactPage =()=>{
 
     return(
 
         <div>
             <h1>
-                HAHAHAHA
+            Contact Page
             </h1>
         </div>
     )
 }
 
-export default IndexPage
+export default ContactPage
