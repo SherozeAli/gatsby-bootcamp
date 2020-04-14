@@ -1,16 +1,37 @@
 import React from "react"
-import {Link} from 'gatsby'
+import {Link,graphql,useStaticQuery} from 'gatsby'
 import Layout from '../components/layout'
 
-const BlogPage =()=>{
+const BlogPage =({data:{allMarkdownRemark:{edges}}})=>{
 
+    const data =useStaticQuery(graphql`
+    {
+        allMarkdownRemark{
+        edges{
+          node{
+            frontmatter{
+              title
+              date
+            }
+           
+          }
+        }
+      }
+    }
+    
+    `)
     return(
 
         <Layout>
-        <h1>
-            BLOGS PAGE 
-        </h1>
-        <h2><Link to='/contact'>go to contact  </Link></h2>
+            {
+                edges.map(({node:{frontmatter}})=>
+                <ol>
+
+         <li>   <h1>{frontmatter.title}</h1></li>
+          <li>  <p>{frontmatter.date}</p></li>
+            </ol>)
+            }
+      
     </Layout>
     )
 }

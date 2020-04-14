@@ -1,0 +1,9 @@
+---
+title: THE GREAT GATSBY BOOTCAMP
+date: "2020-04-09"
+---
+
+LAUNCH A NEW GATSBY BOOTSCAMP
+1. Gatsby
+2. Grapghql
+3. React
